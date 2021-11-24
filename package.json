@@ -1,0 +1,27 @@
+{
+  "name": "tretton_api",
+  "version": "0.1.1",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest './*.test.js' --config=jest.config.js"
+  },
+  "author": "Kanaan Bahmani",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.22.0",
+    "bluebird": "^3.7.2",
+    "body-parser": "^1.19.0",
+    "cheerio": "^1.0.0-rc.10",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "joi": "^17.4.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.0.8"
+  },
+  "devDependencies": {
+    "@shelf/jest-mongodb": "^2.1.0",
+    "jest": "^27.3.1",
+    "mongodb": "^4.1.4"
+  }
+}

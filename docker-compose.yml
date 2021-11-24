@@ -1,0 +1,24 @@
+version: "3.8"
+services:
+    tretton_backend:
+      build: 
+        context: .
+        dockerfile: ./Dockerfile
+      stop_signal: SIGINT
+      container_name: tretton_api_service
+      image: tretton_backend
+      ports:
+        - "9000:9000"
+      # ? For automatically updating the container (for development only)
+      volumes:
+        - .:/app
+      restart: always
+
+    tretton_database:
+      image: mongo
+      container_name: tretton_db_service
+      ports:
+        - "27017:27017"
+      volumes:
+        - /data/db:/data/db
+      restart: unless-stopped
