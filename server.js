@@ -14,9 +14,18 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // ? Routes files
-
+// const ScrapCoworkers = require('./helpers/scraper');
+const GetCoworkers = require('./routes/getCoworkers');
+const GetCoworker = require('./routes/getCowerker');
+const EditCoworker = require('./routes/editCoworker');
+const Login = require('./routes/login');
 
 // ? Router middleware
+// app.use('/api', ScrapCoworkers);
+app.use('/api', GetCoworkers);
+app.use('/api', GetCoworker);
+app.use('/api', EditCoworker);
+app.use('/api', Login);
 
 
 // ! ##### Server #####
