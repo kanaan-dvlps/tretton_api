@@ -2,7 +2,7 @@ const router = require('express').Router();
 const Joi = require('joi');
 const CoworkerModel = require('../Models/CoworkerSchema');
 
-router.post('/update/:id', async (req, res, next) => {
+router.put('/update/:id', async (req, res, next) => {
   try {
     const { name, city, text } = req.body;
     const { id } = req.params;
