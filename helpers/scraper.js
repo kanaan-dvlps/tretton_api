@@ -72,6 +72,9 @@ async function databaseManager(data) {
     const newDatabase = await CoworkerModel.insertMany(data)
     console.log('updated the DB', newDatabase);
     return newDatabase;
+  } else if (hasEntities < data.length){
+    const updatedDatabase = await CoworkerModel.insertMany(data)
+    console.log('updated the DB', updatedDatabase);
   } else {
     console.log(`DB is up_to_date`);
   }

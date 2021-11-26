@@ -5,7 +5,7 @@ const ensureAuthenticated = require('../middleware/JWT');
 router.get('/coworker', ensureAuthenticated, async (req, res, next) => {
   try {
     const { id } = req.query;
-    const coworker = await CoworkerModel.findOne({ _id: id }, { _id: 0, name: 1, text: 1, imagePortraitUrl: 1 });
+    const coworker = await CoworkerModel.findOne({ _id: id }, { _id: 0, name: 1, text: 1, imagePortraitUrl: 1, imageFullUrl: 1 });
     res.status(200).send(coworker);
 
   } catch (error) {
